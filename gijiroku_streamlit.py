@@ -104,6 +104,7 @@ payload = {
   "iinkai": json.dumps(option_selected_i, ensure_ascii=False),
   "year": json.dumps(list(range(start_year, end_year)), ensure_ascii=False)
 }
+
 r = requests.post(url, params=payload)
 r_dict = json.loads(r.text)
 r_body = r_dict["body"]
